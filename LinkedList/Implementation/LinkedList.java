@@ -42,9 +42,18 @@ public class LinkedList{
         }
         System.out.println("null");
     }
-
+    public int len(){
+        int c=0;
+        Node t=Head;
+        while(t!=null){
+            c++;
+            t=t.next;
+        }
+        return c;
+    }
     public static void main(String[] args) {
         LinkedList ll=new LinkedList();
+        System.out.println("Length of Linked List is : "+ll.len());
         ll.print();
         ll.addFirst(10);
         ll.print();
@@ -61,5 +70,6 @@ public class LinkedList{
         ll.print();
         ll.addFirst(100);
         ll.print();
+        System.out.println("Length of Linked List is : "+ll.len());
     }
 }
