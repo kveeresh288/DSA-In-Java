@@ -145,10 +145,16 @@ public void reverse(){
         Prev=Cur;
         Cur=Next;
     }
-   
     Head=Prev;
 }
 
+//size of linked list recursively 
+public int findSizeRec(Node head){
+    if(head==null){
+        return 0;
+    }
+    return 1+findSizeRec(head.next);
+}
     public void print(){
         Node temp=Head;
         while(temp!=null){
@@ -190,6 +196,9 @@ public void reverse(){
         ll.print();
         System.out.println("Length of Linked List is : "+ll.size);
         System.out.println(size);
+        ll.reverse();
+        ll.print();
+        System.out.println(ll.findSizeRec(Head));
 
     }
 }
