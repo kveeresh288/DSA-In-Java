@@ -39,6 +39,16 @@ class QueueUsingArray {
             }
             return arr[0];
         }
+        public void emptyQueue(){
+            if(rear==-1){
+                System.out.println("the Queue is Empty");
+                return;
+            }
+            while(!isEmpty()){
+                System.out.println(peek());
+                remove();
+            }
+        }
 
     }
 
@@ -55,6 +65,8 @@ class QueueUsingArray {
         System.out.println(q.peek());
         System.out.println(q.arr[q.rear]);
         System.out.println(q.isEmpty());
+        q.emptyQueue();
+        System.out.println("The Queue is Empty: "+q.isEmpty());
         
     }
     
